@@ -30,4 +30,4 @@ int main() {
 }
 
 // Compile this code with the following command:
-// gcc stack_example.c singly_linkedlist.c -o stack_example
+// gcc -I.. stack_example.c ../singly_linkedlist.c -o stack_test
