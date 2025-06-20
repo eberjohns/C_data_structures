@@ -86,4 +86,4 @@ int main() {
 
 
 // run this code with the following command:
-// gcc arraylist.c main.c -o arraylist_test
+// gcc arraylist.c example.c -o arraylist_test
