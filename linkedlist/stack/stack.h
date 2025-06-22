@@ -9,28 +9,22 @@ peek()
 isEmpty()
 */
 
-SinglyLinkedList* Stack() {
-    return Singly_LinkedList();
-}
+SinglyLinkedList* (*Stack)() = Singly_LinkedList;
 
 int isEmpty(SinglyLinkedList* list) {
-    return isEmpty_LinkedList(list);
+    return list->size == 0;
 }
 
-DATATYPE pop(SinglyLinkedList* list) {
-    return pop_LinkedList(list);
+int (*push)(SinglyLinkedList*, DATATYPE) = push_head_LinkedList;
+
+DATATYPE (*pop)(SinglyLinkedList*) = pop_LinkedList;
+
+DATATYPE (*peek)(SinglyLinkedList*) = peek_head_LinkedList;
+
+int size(SinglyLinkedList* list) {
+    return list->size;
 }
 
-DATATYPE peek(SinglyLinkedList* list) {
-    return peek_head_LinkedList(list);
-}
-
-int push(SinglyLinkedList* list, DATATYPE data) {
-    return push_head_LinkedList(list, data);
-}
-
-int clear(SinglyLinkedList* list) {
-    return clear_LinkedList(list);
-}
+int (*clear)(SinglyLinkedList*) = clear_LinkedList;
 
 #endif // STACK_H
